@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.TextFieldTreeCell?>
+<?import javafx.scene.control.cell.TextFieldListCell?>
+
+<BorderPane id="BorderPane" prefHeight="517.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.os.filemanager.Controller">
+    <right>
+
+        <VBox id="VBOX" minWidth="220.0" prefHeight="490.0" prefWidth="220.0" spacing="10" BorderPane.alignment="TOP_RIGHT">
+
+            <children>
+
+                <Button id="loadButton" onAction="#load" prefWidth="220" text="Choose Directory!" />
+                <Button id="refreshButton" onAction="#refresh" prefHeight="31.0" prefWidth="220.0" text="Refresh!" />
+
+                <Button id="deleteButton" onAction="#delete" prefWidth="220" text="Delete!" />
+                <TextField fx:id="inputArea" maxWidth="220.0" prefHeight="31.0" prefWidth="213.0" promptText="Enter name for new file/folder" />
+                <Button id="addFileButton" onAction="#addFile" prefWidth="220" text="Add File!" />
+                <Button id="addDirButton" onAction="#addDir" prefWidth="220" text="Add Directory!" />
+                <Button id="moveButton" mnemonicParsing="false" onAction="#move" prefHeight="31.0" prefWidth="221.0" text="Move!" />
+                <Button id="copyButton" mnemonicParsing="false" onAction="#copy" prefHeight="31.0" prefWidth="221.0" text="Copy!" />
+                <Button id="properties" mnemonicParsing="false" onAction="#info" prefHeight="31.0" prefWidth="220.0" text="Properties!" />
+
+
+            </children>
+
+        </VBox>
+
+    </right>
+    <center>
+        <TreeView fx:id="treeView" prefHeight="517.0" prefWidth="675.0" BorderPane.alignment="CENTER" />
+    </center>
+    <left>
+        <TextArea fx:id="Info" prefHeight="517.0" prefWidth="217.0" promptText="Information about file/folder" BorderPane.alignment="CENTER" />
+    </left>
+    <bottom>
+        <Label prefHeight="27.0" prefWidth="303.0" text="Author: Nguyễn Tiến Đạt - 20194242 - HUST" BorderPane.alignment="CENTER" />
+    </bottom>
+</BorderPane>

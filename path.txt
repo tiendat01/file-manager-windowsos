@@ -1,0 +1,11 @@
+path gốc: 
+jpackage -t exe --name (name of your application) --description "(your own discription)" --app-version 1.0 --input (location of jar file) --dest (destination of exe/msi file) --icon (path of icon) --main-jar (name of your jar file) --module-path (location of your jmode) --add-modules javafx.controls,javafx.media,javafx.fxml --win-shortcut --win-menu
+link youtube hướng dẫn: https://www.youtube.com/watch?v=m31BxwXJiV8&t=200s
+cài wix toolset
+java version:
+jdk 14 or later
+javafx 11
+jmod 11
+
+FileManager app:
+jpackage -t exe --name FileManager --description "File Manager by Nguyen Tien Dat 20194242" --app-version 1.0 --input out/artifacts/JavaFxApplication_jar --dest D:\app --icon C:\Users\nguye\Desktop\file-manager-icon.ico --main-jar JavaFxApplication.jar --module-path C:\Eclipse\javafx-jmods-11.0.2 --add-modules javafx.controls,javafx.media,javafx.fxml --win-shortcut --win-menu
